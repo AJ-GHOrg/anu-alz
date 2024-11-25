@@ -127,7 +127,7 @@ archetypes: # `caf-enterprise-scale` module, add inputs as listed on the module 
         config:
           location: ${starter_location}
       dns:
-        enabled: false
+        enabled: true
         config:
           location: null
           enable_private_link_by_service:
