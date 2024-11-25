@@ -97,7 +97,7 @@ archetypes: # `caf-enterprise-scale` module, add inputs as listed on the module 
                 gateway_sku_expressroute: ErGw1AZ
                 gateway_sku_vpn: VpnGw2AZ
               advanced_vpn_settings:
-                enable_bgp: true
+                enable_bgp: false #change
                 active_active: false
                 private_ip_address_allocation: true
                 default_local_network_gateway_id: ""
