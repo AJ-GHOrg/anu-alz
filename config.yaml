@@ -23,6 +23,67 @@ archetypes: # `caf-enterprise-scale` module, add inputs as listed on the module 
   deploy_connectivity_resources: true
   deploy_identity_resources: true
   disable_telemetry: true
+  archetype_config_overrides:
+      root:
+        enforcement_mode:
+          Audit-UnusedResources: true
+          Deny-Classic-Resources: true
+          Deny-UnmanagedDisk: true
+          Deploy-ASC-Monitoring: true
+          Deploy-AzActivity-Log: true
+          Deploy-MDEndpoints: false
+          Deploy-MDFC-Config: false
+          Deploy-MDFC-OssDb: false
+          Deploy-MDFC-SqlAtp: false
+          Deploy-Resource-Diag: false
+          Deploy-VM-Monitoring: true
+          Deploy-VMSS-Monitoring: false
+          Enforce-ACSB: false
+      decommissioned:
+        enforcement_mode:
+          Enforce-ALZ-Decomm: true
+      sandboxes:
+        enforcement_mode:
+          Enforce-ALZ-Sandbox: true
+      landing-zones:
+        enforcement_mode:
+          Audit-AppGW-WAF: true
+          Deny-IP-forwarding: true
+          Deny-MgmtPorts-Internet: true
+          Deny-Priv-Esc-AKS: true
+          Deny-Privileged-AKS: true
+          Deny-Storage-http: true
+          Deny-Subnet-Without-Nsg: true
+          Deploy-AKS-Policy: true
+          Deploy-AzSqlDb-Auditing: false
+          Deploy-SQL-Threat: false
+          Deploy-VM-Backup: false
+          Enable-DDoS-VNET: false
+          Enforce-AKS-HTTPS: false
+          Enforce-GR-KeyVault: false
+          Enforce-TLS-SSL: true
+      platform:
+        enforcement_mode:
+          Enforce-GR-KeyVault: false
+      connectivity:
+        enforcement_mode:
+          Enable-DDoS-VNET: false
+      management:
+        enforcement_mode:
+          Deploy-Log-Analytics: true
+      identity:
+        enforcement_mode:
+          Deny-MgmtPorts-Internet: true
+          Deny-Public-IP: true
+          Deny-Subnet-Without-Nsg: true
+          Deploy-VM-Backup: true
+      corp:
+        enforcement_mode:
+          Audit-PeDnsZones: true
+          Deny-HybridNetworking: true
+          Deny-Public-Endpoints: true
+          Deny-Public-IP-On-NIC: true
+          Deploy-Private-DNS-Zones: true
 
   # Management
   configure_management_resources:
