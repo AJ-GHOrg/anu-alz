@@ -105,7 +105,7 @@ archetypes: # `caf-enterprise-scale` module, add inputs as listed on the module 
                 bgp_settings: []
                 custom_route: []
             azure_firewall:
-              enabled: false
+              enabled: true
               config:
                 address_prefix: 10.18.2.0/25
                 enable_dns_proxy: true
