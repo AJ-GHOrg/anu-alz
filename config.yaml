@@ -60,7 +60,7 @@ archetypes: # `caf-enterprise-scale` module, add inputs as listed on the module 
           Deploy-VM-Backup: false
           Enable-DDoS-VNET: false
           Enforce-AKS-HTTPS: false
-          Enforce-GR-KeyVault: false
+          Enforce-GR-KeyVault: true
           Enforce-TLS-SSL: true
       platform:
         enforcement_mode:
